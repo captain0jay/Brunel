@@ -1,14 +1,17 @@
 import React from 'react'
 import Accordion from './Accordin';
-
+import QNAimage from './svgs/qnaimage.png';
 export default function Qna() {
   return (
     <>
-    <div className='rounded-3xl bg-gray-100 grid grid-cols-2 w-full h-autto gap-5 p-6 sm:p-14'>
+    <div className='relative rounded-3xl bg-gray-100 grid grid-cols-2 w-full h-autto gap-5 p-6 sm:p-14'>
+        {/* Ask question header */}
         <div className='col-span-2 sm:col-span-1 md:col-span-1'>
         <div className='text-2xl text-gray-500 font-bold shadows-into-light-regular'>What's on your mind</div>
         <div className='text-5xl lato-regular mt-2'>Ask questions</div>
         </div>
+
+        {/* QnA container*/}
         <div className='col-span-2 sm:col-span-1 md:col-span-1'>
         <div>
         <Accordion title="Do you offer freelancers?">
@@ -33,6 +36,12 @@ and duration for me?">
         </Accordion>
         </div>
         </div>
+
+        {/* Image container*/}
+        <div className='absolute bottom-0 left-0 h-[70%] w-[50%]'>
+            <img src={QNAimage} className='w-full h-full' alt='Qna art'/>
+        </div>
+
     </div>
     </>
   )
