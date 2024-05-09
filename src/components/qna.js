@@ -38,7 +38,7 @@ and duration for me?">
         </div>
 
         {/* Image container*/}
-        <div className='absolute bottom-0 left-0 h-[70%] w-[50%]'>
+        <div className='absolute bottom-0 left-0 h-[70%] max-h-[450px] w-[50%] max-w-[400px]'>
             <img src={QNAimage} className='w-full h-full' alt='Qna art'/>
         </div>
 
