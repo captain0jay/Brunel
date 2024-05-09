@@ -5,20 +5,13 @@ import Plane from './plane.svg';
 import fourty from './fourty.svg';
 import Arrow from './Arrow.svg'
 import './input.css';
-import { TECarousel, TECarouselItem } from "tw-elements-react";
 import Accordion from './Accordin';
-import AccordionActions from '@mui/material/AccordionActions';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Carousel from './Carousel';
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route,Routes, Link, withRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Route,Routes, Link } from 'react-router-dom';
 import Getprojects from './Getprojects';
 import Menu from './menu.svg';
 import Xcircle from './x-circle.svg';
-import X from './x.svg';
-import ReactDOM from 'react-dom';
 
 function App() {
   const [page, setPage] = useState('');
@@ -42,9 +35,9 @@ function App() {
   };
 
   // Function to hide the menu
-  const hideMenu = () => {
-    setMenuVisible(false);
-  };
+  // const hideMenu = () => {
+  //   setMenuVisible(false);
+  // };
 
   return (
     <Router>
@@ -65,9 +58,9 @@ function App() {
             {/* Menu */}
             {menuVisible && (
               <div className="absolute top-0 right-0 mt-12 bg-white border rounded shadow-md">
-                <a href="#" className="block px-4 py-2 text-gray-800"><Link to="/getprojects" onClick={() => setPage('getprojects')}>
+                <a href="/getprojects" className="block px-4 py-2 text-gray-800"><Link to="/getprojects" onClick={() => setPage('getprojects')}>
               <button className="w-[170px] h-[57px] border border-gray-400 rounded-full p-4 flex justify-center items-center hover:bg-gray-200 hover:border-0">Get Projects</button></Link></a>
-                <a href="#" className="block px-4 py-2 text-gray-800"><button className="w-[170px] h-[57px] rounded-full p-4 flex justify-center items-center text-white bg-black hover:bg-gray-600">Onboard Talent</button></a>
+                <a href="/" className="block px-4 py-2 text-gray-800"><button className="w-[170px] h-[57px] rounded-full p-4 flex justify-center items-center text-white bg-black hover:bg-gray-600">Onboard Talent</button></a>
               </div>
             )}
           </div>
