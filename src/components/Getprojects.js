@@ -26,7 +26,7 @@ export default function Getprojects() {
         if (i < 0) {
             clearInterval(intervalId); // Stop the interval when count reaches 0
             if(i===0){
-                window.location.href = 'http://localhost:3000';
+                window.location.href = 'https://brunelclone.vercel.app/';
             }
         }
         }, 1000);
@@ -40,7 +40,7 @@ export default function Getprojects() {
   useEffect(() => {
     if (count === 0) {
       setTimeout(() => {
-        window.location.href = 'http://localhost:3000'; // Redirect to localhost:3000 after 5 seconds
+        window.location.href = 'https://brunelclone.vercel.app/'; // Redirect to localhost:3000 after 5 seconds
       }, 5000);
     }
   }, [count]);
@@ -54,26 +54,26 @@ export default function Getprojects() {
   return (
     submitted
         ?
-        <div className='w-full h-auto flex flex-col justify-center items-center'>
-        <div className="w-full flex flex-col justify-center items-center pt-20 gap-2">
-            <img src={Ticknround} alt="My SVG" />
-            <div className='text-2xl text-green-600 font-bold shadows-into-light-regular'>Success submitted</div>
-            <div className='text-5xl lato-regular'>Congratulations</div>
-            <div className='text-3xl text-gray-500 lato-regular max-w-[750px] flex text-center'>Your request has been successfully submitted to us. We will validate your information and reach out to your shortly with updates</div>
-        </div>
-        <div className='flex mt-6 justify-center items-center'>
-        <div className='text-gray-500 flex'>Redirecting to your Homepage in&nbsp;<div className='text-black font-bold'> {count} Seconds</div></div>
-        </div>
+        <div className='w-full h-auto flex flex-col justify-center items-center p-2'>
+          <div className="w-full flex flex-col justify-center items-center pt-20 gap-2">
+              <img src={Ticknround} alt="My SVG" />
+              <div className='text-2xl text-green-600 font-bold shadows-into-light-regular'>Success submitted</div>
+              <div className='text-4xl sm:text-5xl lato-regular'>Congratulations</div>
+              <div className='text-2xl sm:text-3xl text-gray-500 lato-regular max-w-[750px] flex text-center'>Your request has been successfully submitted to us. We will validate your information and reach out to your shortly with updates</div>
+          </div>
+          <div className='flex mt-6 justify-center items-center'>
+            <div className='text-gray-500 flex'>Redirecting to your Homepage in&nbsp;<div className='text-black font-bold'> {count} Seconds</div></div>
+          </div>
         </div>
         :
-    <div className='w-full h-auto flex flex-col justify-center items-center'>
+    <div className='w-full h-auto flex flex-col justify-center items-center p-2'>
         <div className="w-full flex flex-col justify-center items-center pt-20 gap-2">
             <div className='text-2xl text-green-600 font-bold shadows-into-light-regular'>Registration form</div>
             <div className='text-5xl lato-regular text-center w-full max-w-[400px]'>Start your success Journey here!</div>
         </div>
 
         <div className="w-full flex flex-col justify-center items-center pt-10 gap-6">
-        <input className="w-full max-w-[400px] h-[70px] rounded-full bg-gray-200 p-2" type="text" placeholder="   Enter name" />
+            <input className="w-full max-w-[400px] h-[70px] rounded-full bg-gray-200 p-2" type="text" placeholder="   Enter name" />
 
             <input
               className="w-full max-w-[400px] h-[70px] rounded-full bg-gray-200 p-2"

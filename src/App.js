@@ -31,17 +31,16 @@ function App() {
     setMenuVisible(!menuVisible);
   };
 
-  // Function to hide the menu
-  // const hideMenu = () => {
-  //   setMenuVisible(false);
-  // };
-
   return (
     <Router>
     <div>
 
+      {/* Navbar starts here*/}
       <div className="w-full h-[70px] flex pl-5 sm:pl-10 pt-2 sm:pt-5">
+        {/* logo */}
         <div className="w-[150px] h-[100px] pt-2"><img src={MySVG} alt="My SVG" /></div>
+
+        {/* conditional statement to change from bgetprojects button to close */}
         {page==='getprojects'?
         <div className="w-[50%] absolute right-4 top-4 flex p-2 gap-4 justify-end">
         <Link to="/" onClick={() => setPage('')}>
@@ -70,24 +69,30 @@ function App() {
       </div>
       </div>
 
+     {/* Checks weather its in homepage or getprojects */}
     {page!=='getprojects'?
 
     <div className='w-full h-auto'>
+
+            {/* Home page starts here*/}
             <div className="w-full flex flex-col justify-center items-center pt-20 gap-2">
               <div className='text-2xl text-green-600 font-bold shadows-into-light-regular'>Success Stories</div>
               <div className='text-5xl lato-regular text-center w-full max-w-[550px]'>Every success journey we've encountered.</div>
             </div>
 
 
+            {/* Middle section containing carousel */}
             <div className="w-full grid grid-cols-2">
               <Midsection/>
             </div>
 
 
+            {/* Questions and answer section */}
             <div className='w-full p-2 sm:p-8'>
               <Qna/>
             </div>
 
+            {/* Footer section */}
             <div className='w-full p-6'>
               <Footer/>
             </div>
