@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Ticknround from './ticknround.svg';
+import Ticknround from './svgs/ticknround.svg';
+
 export default function Getprojects() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
