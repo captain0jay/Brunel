@@ -21,8 +21,8 @@ function Carousel() {
         <div className="w-full flex">
           <div className="w-full flex h-auto min-h-[220px]">
             <CarouselItem active={currentItem === 0}><div className='text-5xl lato-regular'>Enhance fortune 50 company's insights teams research capabilities</div></CarouselItem>
-            <CarouselItem active={currentItem === 1}><div className='text-5xl lato-regular'>Use Artificial intelligence to filter candidates</div></CarouselItem>
-            <CarouselItem active={currentItem === 2}><div className='text-5xl lato-regular'>Hire Better and faster</div></CarouselItem>
+            <CarouselItem active={currentItem === 1}><div className='text-5xl lato-regular'>Maximize insights. Optimize strategies. Elevate your enterprise.</div></CarouselItem>
+            <CarouselItem active={currentItem === 2}><div className='text-5xl lato-regular'>Unlock data. Drive growth. Propel success. Choose us.</div></CarouselItem>
           </div>
         </div>
       </div>

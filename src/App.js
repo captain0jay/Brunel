@@ -59,11 +59,6 @@ function App() {
         </div>
         :
         <div className="w-[50%] absolute right-0 flex p-2 gap-4 justify-end">
-          <div className='w-[100%] flex gap-2 sm:block hidden'>
-            <Link to="/getprojects" onClick={() => setPage('getprojects')}>
-              <button className="w-[170px] h-[57px] border border-gray-400 rounded-full p-4 flex justify-center items-center hover:bg-gray-200 hover:border-0">Get Projects</button></Link>
-              <button className="w-[170px] h-[57px] rounded-full p-4 flex justify-center items-center text-white bg-black hover:bg-gray-600">Onboard Talent</button>
-          </div>
           <div className="relative block sm:hidden">
             <img src={Menu} alt="My SVG" onClick={toggleMenu} className='mt-2'/>
 
@@ -76,9 +71,13 @@ function App() {
               </div>
             )}
           </div>
-        </div>
-        
+        </div> 
       }
+      <div className='w-[50%] absolute right-0 flex p-2 gap-4 justify-end'>
+        <Link to="/getprojects" onClick={() => setPage('getprojects')} className='sm:block hidden'>
+          <button className="w-[170px] h-[57px] border border-gray-400 rounded-full p-4 flex justify-center items-center hover:bg-gray-200 hover:border-0">Get Projects</button></Link>
+          <button className="w-[170px] h-[57px] rounded-full p-4 flex justify-center items-center text-white bg-black hover:bg-gray-600 sm:block hidden">Onboard Talent</button>
+      </div>
       </div>
 
     {page!=='getprojects'?
@@ -86,7 +85,7 @@ function App() {
     <div className='w-full h-auto'>
             <div className="w-full flex flex-col justify-center items-center pt-20 gap-2">
               <div className='text-2xl text-green-600 font-bold shadows-into-light-regular'>Success Stories</div>
-              <div className='text-5xl lato-regular text-center w-full max-w-[400px]'>Every success journey we've encountered.</div>
+              <div className='text-5xl lato-regular text-center w-full max-w-[550px]'>Every success journey we've encountered.</div>
             </div>
 
 
@@ -131,11 +130,11 @@ function App() {
               <div className='col-span-2 sm:col-span-1 md:col-span-1'>
               <div>
                 <Accordion title="Do you offer freelancers?">
-                  <p>Accordion Content 1</p>
+                  <p>Yes, we provide access to a curated pool of skilled freelancers tailored to your project needs, ensuring flexibility and efficiency in your staffing requirements.</p>
                 </Accordion>
                 <Accordion title="What's the guarantee that I will be satisfied
       with the hired talent?">
-                  <p>Accordion Content 2</p>
+                  <p>We assure satisfaction through rigorous vetting processes and ongoing support, ensuring that only top-tier talent suited to your specific needs is provided.</p>
                 </Accordion>
 
                 <Accordion title="Can I hire multiple talents at once?">
@@ -143,12 +142,12 @@ function App() {
                 </Accordion>
 
                 <Accordion title="Why should I not go to an agency directly?">
-                  <p>Accordion Content 1</p>
+                  <p>By choosing us, you gain direct access to specialized talent without the overhead costs associated with traditional agencies, ensuring cost-effectiveness and streamlined communication.</p>
                 </Accordion>
 
                 <Accordion title="Who can help me pick a right skillset
       and duration for me?">
-                  <p>Accordion Content 1</p>
+                  <p>Our expert team offers personalized guidance to help you navigate skillset selection and project duration, ensuring optimal outcomes aligned with your objectives and timeline.</p>
                 </Accordion>
               </div>
               </div>

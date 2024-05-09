@@ -61,8 +61,7 @@ export default function Getprojects() {
             <div className='text-3xl text-gray-500 lato-regular max-w-[750px] flex text-center'>Your request has been successfully submitted to us. We will validate your information and reach out to your shortly with updates</div>
         </div>
         <div className='flex mt-6 justify-center items-center'>
-        <div className='text-gray-500'>Redirecting to your Homepage in </div>
-        <div className='text-black font-bold'> {count} Seconds</div>
+        <div className='text-gray-500 flex'>Redirecting to your Homepage in&nbsp;<div className='text-black font-bold'> {count} Seconds</div></div>
         </div>
         </div>
         :
