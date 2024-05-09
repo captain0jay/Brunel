@@ -26,7 +26,7 @@ export default function Getprojects() {
         if (i < 0) {
             clearInterval(intervalId); // Stop the interval when count reaches 0
             if(i===0){
-                window.location.href = 'https://brunelclone.vercel.app/';
+                window.location.href = process.env.REACT_APP_WEBSITE_URL;
             }
         }
         }, 1000);
@@ -40,7 +40,7 @@ export default function Getprojects() {
   useEffect(() => {
     if (count === 0) {
       setTimeout(() => {
-        window.location.href = 'https://brunelclone.vercel.app/'; // Redirect to localhost:3000 after 5 seconds
+        window.location.href = process.env.REACT_APP_WEBSITE_URL; // Redirect to localhost:3000 after 5 seconds
       }, 5000);
     }
   }, [count]);
